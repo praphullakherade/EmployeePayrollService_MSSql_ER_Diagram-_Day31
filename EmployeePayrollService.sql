@@ -30,3 +30,21 @@ desc employee_payroll;
 alter table employee_payroll add column gender varchar(1) after empname;
 update employee_payroll set gender='M' where id>=1;
 select * from employee_payroll;
+
+-- UC7
+insert into employee_payroll(empname,gender,salary,startDate) values('Aditi','F',1000000,'2015-7-10');
+insert into employee_payroll(empname,gender,salary,startDate) values('Rutika','F',8500,'2018-6-21');
+insert into employee_payroll(empname,gender,salary,startDate) values('Smurti','F',78512,'2021-7-27');
+select * from employee_payroll;
+
+select sum(salary) from employee_payroll where gender='M' group by gender;
+select avg(salary) from employee_payroll where gender='M' group by gender;
+select min(salary) from employee_payroll where gender='M' group by gender;
+select max(salary) from employee_payroll where gender='M' group by gender;
+select count(salary) from employee_payroll where gender='M' group by gender;
+
+select sum(salary) from employee_payroll where gender='F' group by gender;
+select avg(salary) from employee_payroll where gender='F' group by gender;
+select min(salary) from employee_payroll where gender='F' group by gender;
+select max(salary) from employee_payroll where gender='F' group by gender;
+select count(salary) from employee_payroll where gender='F' group by gender;
