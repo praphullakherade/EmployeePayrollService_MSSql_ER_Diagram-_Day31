@@ -24,3 +24,9 @@ select * from employee_payroll;
 -- UC5
 select salary from employee_payroll where empname='Rohit';
 select * from employee_payroll where startDate between cast('2017-01-05' as date) and date(now());
+
+-- UC6 
+desc employee_payroll;
+alter table employee_payroll add column gender varchar(1) after empname;
+update employee_payroll set gender='M' where id>=1;
+select * from employee_payroll;
