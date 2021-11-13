@@ -48,3 +48,9 @@ select avg(salary) from employee_payroll where gender='F' group by gender;
 select min(salary) from employee_payroll where gender='F' group by gender;
 select max(salary) from employee_payroll where gender='F' group by gender;
 select count(salary) from employee_payroll where gender='F' group by gender;
+
+-- UC8
+alter table employee_payroll add column empphone long;
+alter table employee_payroll add column address varchar(50) default 'india';
+alter table employee_payroll add column department varchar(20) not null;
+desc employee_payroll;
