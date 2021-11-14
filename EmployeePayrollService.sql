@@ -56,3 +56,11 @@ alter table employee_payroll add department varchar(250) not null after address;
 alter table employee_payroll alter address set default 'TBD';
 desc employee_payroll;
 select * from employee_payroll;
+
+-- UC9
+alter table employee_payroll rename column salary to basicPay;
+alter table employee_payroll add deductions double not null after basicPay;
+alter table employee_payroll add texablePay double not null after deductions;
+alter table employee_payroll add tax double not null after texablePay;
+alter table employee_payroll add netPay double not null after tax;
+desc employee_payroll;
