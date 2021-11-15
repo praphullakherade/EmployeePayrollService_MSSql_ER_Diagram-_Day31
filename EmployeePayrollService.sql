@@ -64,3 +64,10 @@ alter table employee_payroll add texablePay double not null after deductions;
 alter table employee_payroll add tax double not null after texablePay;
 alter table employee_payroll add netPay double not null after tax;
 desc employee_payroll;
+
+-- UC10
+select * from employee_payroll where empname = 'Aditi';
+update employee_payroll set department = 'sales' where id=7;
+insert into employee_payroll(empname,department,gender,basicPay,deductions,texablePay,tax,netPay,startDate) values('Aditi', 'marketting', 'F', 1000000, 75000, 60000, 900000, 780000, '2018-08-30');
+
+delete from employee_payroll where id = 11;
