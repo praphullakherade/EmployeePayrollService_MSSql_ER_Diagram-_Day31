@@ -85,3 +85,24 @@ insert into employee_department(emp_id, dept_id) values(8, 108);
 insert into employee_department(emp_id, dept_id) values(9, 109);
 insert into employee_department(emp_id, dept_id) values(10, 110);
 select * from employee_department;
+
+-- UC12
+create table company(company_id int not null auto_increment primary key, company_name varchar(50));
+desc company;
+insert into company(company_name) values ('abc');
+insert into company(company_name) values ('pqr');
+insert into company(company_name) values ('xyz');
+select * from company;
+select company_name from company where company_id=2;
+alter table company add column turn_over int ;
+update company set turn_over = 100000 where company_id=1;
+update company set turn_over = 200000 where company_id=2;
+update company set turn_over = 300000 where company_id=3;
+select * from company;
+select sum(turn_over) from company;
+select avg(turn_over) from company;
+select max(turn_over) from company;
+select min(turn_over) from company;
+select count(turn_over) from company;
+
+
