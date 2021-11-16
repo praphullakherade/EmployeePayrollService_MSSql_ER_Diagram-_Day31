@@ -71,3 +71,17 @@ update employee_payroll set department = 'sales' where id=7;
 insert into employee_payroll(empname,department,gender,basicPay,deductions,texablePay,tax,netPay,startDate) values('Aditi', 'marketting', 'F', 1000000, 75000, 60000, 900000, 780000, '2018-08-30');
 
 delete from employee_payroll where id = 11;
+
+-- UC 11
+create table employee_department(emp_id int not null auto_increment primary key, dept_id int not null);
+insert into employee_department(emp_id, dept_id) values(1, 101);
+insert into employee_department(emp_id, dept_id) values(2, 102);
+insert into employee_department(emp_id, dept_id) values(3, 103);
+insert into employee_department(emp_id, dept_id) values(4, 104);
+insert into employee_department(emp_id, dept_id) values(5, 105);
+insert into employee_department(emp_id, dept_id) values(6, 106);
+insert into employee_department(emp_id, dept_id) values(7, 107);
+insert into employee_department(emp_id, dept_id) values(8, 108);
+insert into employee_department(emp_id, dept_id) values(9, 109);
+insert into employee_department(emp_id, dept_id) values(10, 110);
+select * from employee_department;
